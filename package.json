@@ -1,0 +1,41 @@
+{
+  "name": "migrator",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Migrator Service PoC",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf ./lib",
+    "prebuild": "npm run clean",
+    "prepublish": "npm run build",
+    "watch": "npm-run-all --parallel watch:*",
+    "watch:ts": "tsc -w",
+    "watch:js": "nodemon lib/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/palmerabollo/migrator"
+  },
+  "keywords": [
+    "migrations",
+    "evolutions"
+  ],
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "logops": "^2.1.1",
+    "migrate": "^1.7.0",
+    "slugify": "^1.4.4"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.27",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.9.3"
+  }
+}

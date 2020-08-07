@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "suppressImplicitAnyIndexErrors": false,
+    "outDir": "./lib",
+    "preserveConstEnums": true,
+    "pretty": true,
+    "removeComments": true,
+    "skipLibCheck": true,
+    "target": "es2018",
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "es2018"
+    ],
+    "types": [
+      "node"
+    ]
+  },
+  "include": [
+    "src/**/*",
+    "typings/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "lib",
+    "**/*.spec.ts"
+  ]
+}
